@@ -3,6 +3,20 @@ package entidades;
 public class Cliente {
     private String nome;
     private String endereco;
+    private Cidade cidade;
+
+    //override - sobreescrita de metodo
+    public String toString(){
+        return getNome();
+    }
+    
+    public Cidade getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(Cidade cidade) {
+        this.cidade = cidade;
+    }
 
     public Cliente(String nome){
         setNome(nome);

@@ -11,6 +11,18 @@ namespace entidades {
         + setNome(nome:String):void
         + getEndereco():String
         + setEndereco(endereco:String ):void
+        + getCliente():Cliente
+        + setCliente(cliente:Cliente):void
+        + toString():String
     }
+    class Cidade {
+        - String nome
+        + Cidade(nome:String)
+    }
+    class Object {
+        + toString():String
+    }
+    Cliente "-cidade *" -> "1" Cidade
+    Cliente --|>  Object
 }
 @enduml
